@@ -9,6 +9,13 @@ task("accounts", "Prints the list of accounts", async(taskArgs, hre) =>{
 });
 
 /** @type import('hardhat/config').HardhatUserConfig */
+
+module.exports = {
+  paths: {
+    artifacts: 'TCP/artifacts',
+  },
+};
+
 module.exports = {
 
   defaultNetwork: "hardhat",
