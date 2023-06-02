@@ -16,8 +16,8 @@ describe("TPCMockUSDT", function () {
     it("Should deploy MockUSDT conract", async() =>{
         [deployer, user1, user2] = await ethers.getSigners()
 
-        const MockUSDT = await ethers.getContractFactory("MockUSDT")
-        TPCMockUSDTContract = await MockUSDT.deploy(totalSupply)
+        const TPCMockUSDT = await ethers.getContractFactory("TPCMockUSDT")
+        TPCMockUSDTContract = await TPCMockUSDT.deploy(totalSupply)
         await TPCMockUSDTContract.deployed()
         const currentTotalSupply = await TPCMockUSDTContract.totalSupply()
         expect(await TPCMockUSDTContract.totalSupply()).to.equal(totalSupply)
